@@ -32,6 +32,7 @@ Implementation using C or pyhton code
 ## PROGRAM:
 PROGRAM:
 CaearCipher.
+```
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -67,7 +68,7 @@ scanf("%d", &key); // Read the key from the user
 caesarDecrypt(message, key); printf("Decrypted Message: %s", message); return 0;
 }
 
-
+```
 ## OUTPUT:
 OUTPUT:
 Simulating Caesar Cipher
@@ -119,6 +120,7 @@ To decrypt, use the INVERSE (opposite) of the last 3 rules, and the 1st as-is (d
 
 
 ## PROGRAM:
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -274,7 +276,7 @@ printf("Cipher text: %s\n", str);
 
 return 0;
 }
-
+```
 ## OUTPUT:
 Output:
 Key text: Monarchy Plain text: instruments Cipher text: gatlmzclrqtx
@@ -312,10 +314,12 @@ The cipher can, be adapted to an alphabet with any number of letters. All arithm
 
 
 ## PROGRAM:
-PROGRAM:
-#include <stdio.h> #include <string.h>
+```
+#include <stdio.h>
+#include <string.h>
 int keymat[3][3] = { { 1, 2, 1 }, { 2, 3, 2 }, { 2, 2, 1 } };
-int invkeymat[3][3] = { { -1, 0, 1 }, { 2, -1, 0 }, { -2, 2, -1 } }; char key[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int invkeymat[3][3] = { { -1, 0, 1 }, { 2, -1, 0 }, { -2, 2, -1 } };
+char key[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char encode(char a, char b, char c) { char ret[4];
 int x, y, z;
 int posa = (int) a - 65; int posb = (int) b - 65; int posc = (int) c - 65;
@@ -358,7 +362,7 @@ strcat(dec, decode(a, b, c));
 printf("Decoded message : %s\n", dec); return 0;
 }
 
-
+```
 ## OUTPUT:
 OUTPUT:
 Simulating Hill Cipher
@@ -397,8 +401,9 @@ The Vigenere cipher is a method of encrypting alphabetic text by using a series 
 
 
 ## PROGRAM:
-PROGRAM:
-#include<stdio.h> #include<string.h>
+```
+#include<stdio.h>
+#include<string.h>
 //FunctiontoperformVigenereencryption voidvigenereEncrypt(char*text,constchar*key){ inttextLen= strlen(text);
 intkeyLen=strlen(key); for(inti =0;i< textLen;i++){ charc =text[i]; if(c>='A'&&c<='Z'){
 //Encryptuppercaseletters
@@ -427,7 +432,7 @@ constchar *key="KEY";//Replacewithyourdesired key
 char message[]= "Thisisasecretmessage.";//Replace withyourmessage
 //Encrypt themessage vigenereEncrypt(message,key); printf("EncryptedMessage:%s\n",message);
 //Decrypt themessage backtotheoriginal vigenereDecrypt(message,key); printf("DecryptedMessage:%s\n",message); Return 0;
-
+```
 ## OUTPUT:
 OUTPUT :
 
@@ -465,9 +470,10 @@ ALGORITHM DESCRIPTION:
 In the rail fence cipher, the plaintext is written downwards and diagonally on successive "rails" of an imaginary fence, then moving up when we reach the bottom rail. When we reach the top rail, the message is written downwards again until the whole plaintext is written out. The message is then read off in rows.
 
 ## PROGRAM:
-
-PROGRAM:
-#include<stdio.h> #include<string.h> #include<stdlib.h> main()
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h> main()
 {
 int i,j,len,rails,count,code[100][1000]; char str[1000];
 printf("Enter a Secret Message\n"); gets(str);
@@ -512,6 +518,7 @@ if(code[i][j]!=0) printf("%c",code[i][j]);
 }
 printf("\n");
 }
+```
 ## OUTPUT:
 OUTPUT:
 Enter a Secret Message wearediscovered
